@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラス・料金のご案内 | Challenger GYM - 東村山・秋津の格闘技×パーソナルトレーニングジム</title>
+    <meta name="description" content="筋トレ・キックボクシング・パーソナル・ダンス・キッズまで。月会費で全クラス自由に参加OK。目的に合わせて選べる多彩なプログラム。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/classes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Challenger <span class="logo-accent">GYM</span></span>
+                        <span class="logo-subtitle">秋津・新秋津</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu desktop-menu">
+                    <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="classes.html" class="nav-link active">CLASS & PRICE</a></li>
+                    <li><a href="kids.html" class="nav-link">KIDS</a></li>
+                    <li><a href="trainers.html" class="nav-link">TRAINERS</a></li>
+                    <li><a href="index.html#voices" class="nav-link">VOICES</a></li>
+                    <li><a href="index.html#access" class="nav-link">ACCESS</a></li>
+                    <li class="nav-cta">
+                        <a href="#" class="btn btn-primary header-cta" onclick="openLineReservation(event)">
+                            <i class="fab fa-line"></i> 無料体験予約
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html#about" class="mobile-nav-link">ABOUT</a></li>
+                <li><a href="classes.html" class="mobile-nav-link">CLASS & PRICE</a></li>
+                <li><a href="kids.html" class="mobile-nav-link">KIDS</a></li>
+                <li><a href="index.html#voices" class="mobile-nav-link">VOICES</a></li>
+                <li><a href="index.html#access" class="mobile-nav-link">ACCESS</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Fixed CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0425059323" class="mobile-cta-btn">
+            <i class="fas fa-phone"></i>
+            <span>電話で相談</span>
+        </a>
+        <a href="#" onclick="openLineReservation(event)" class="mobile-cta-btn mobile-cta-primary">
+            <i class="fab fa-line"></i>
+            <span>LINEで無料体験</span>
+        </a>
+    </div>
+    
+    <!-- Floating CTA Button (PC) -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#" onclick="openLineReservation(event)" class="floating-cta-btn">
+            <i class="fab fa-line"></i>
+            <span class="floating-cta-text">無料体験予約</span>
+            <span class="floating-cta-subtext">LINEでかんたん1分</span>
+        </a>
+    </div>
+    
+    <!-- Section 1: Page Header -->
+    <section class="page-header-section">
+        <div class="page-header-background">
+            <img src="https://www.genspark.ai/api/files/s/5HXDCXAV" alt="トレーニング風景">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <h1 class="page-main-title">クラス・料金のご案内</h1>
+            <p class="page-lead">
+                Challenger GYM では、筋トレ・キックボクシング・パーソナル・ダンス・キッズクラスまで、<br class="pc-br">目的に合わせた多彩なクラスをご用意しています。<br>
+                どの月額プランでも、スケジュール内のクラスを自由に組み合わせて受講できます<span class="note-text">（一部クラスを除く）</span>。
+            </p>
+            <div class="page-header-cta">
+                <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl">
+                    <i class="fab fa-line"></i> 無料体験レッスンを予約する
+                </a>
+                <a href="https://stores.jp/challenger-gym" target="_blank" rel="noopener" class="btn btn-outline-dark btn-xl">
+                    <i class="fas fa-calendar-check"></i> コースを予約する（Stores）
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: Class Index Cards -->
+    <section class="class-index-section">
+        <div class="container">
+            <h2 class="section-title">あなたに合うクラスを見つけよう</h2>
+            
+            <div class="class-index-grid">
+                <!-- PHYSICAL -->
+                <div class="class-index-card" data-target="physical">
+                    <div class="class-index-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="class-index-title">PHYSICAL</h3>
+                    <p class="class-index-subtitle">フィジカルクラス</p>
+                    <p class="class-index-description">筋トレ＋自重トレーニングで身体を引き締めたい方向け</p>
+                    <div class="class-index-tags">
+                        <span class="tag">筋力UP</span>
+                        <span class="tag">体幹強化</span>
+                        <span class="tag">初心者OK</span>
+                    </div>
+                    <a href="#physical" class="btn btn-outline-dark btn-sm">詳しく見る</a>
+                </div>
+                
+                <!-- KICKBOXING -->
+                <div class="class-index-card" data-target="kickboxing">
+                    <div class="class-index-icon kickboxing">
+                        <i class="fas fa-hand-fist"></i>
+                    </div>
+                    <h3 class="class-index-title">KICKBOXING</h3>
+                    <p class="class-index-subtitle">キックボクシング</p>
+                    <p class="class-index-description">ミット打ちで脂肪を燃やし、ストレスも発散したい方向け</p>
+                    <div class="class-index-tags">
+                        <span class="tag">脂肪燃焼</span>
+                        <span class="tag">ストレス発散</span>
+                        <span class="tag">護身術</span>
+                    </div>
+                    <a href="#kickboxing" class="btn btn-outline-dark btn-sm">詳しく見る</a>
+                </div>
+                
+                <!-- PERSONAL -->
+                <div class="class-index-card" data-target="personal">
+                    <div class="class-index-icon personal">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="class-index-title">PERSONAL</h3>
+                    <p class="class-index-subtitle">パーソナルトレーニング</p>
+                    <p class="class-index-description">短期間で結果を出したい・マンツーマンで見てもらいたい方向け</p>
+                    <div class="class-index-tags">
+                        <span class="tag">短期集中</span>
+                        <span class="tag">個別指導</span>
+                        <span class="tag">完全個室</span>
+                    </div>
+                    <a href="#personal" class="btn btn-outline-dark btn-sm">詳しく見る</a>
+                </div>
+                
+                <!-- DANCE -->
+                <div class="class-index-card" data-target="dance">
+                    <div class="class-index-icon dance">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="class-index-title">DANCE</h3>
+                    <p class="class-index-subtitle">ダンスクラス</p>
+                    <p class="class-index-description">音楽に合わせて楽しく身体を動かしたい・柔軟性を高めたい方向け</p>
+                    <div class="class-index-tags">
+                        <span class="tag">柔軟性UP</span>
+                        <span class="tag">楽しい</span>
+                        <span class="tag">体幹</span>
+                    </div>
+                    <a href="#dance" class="btn btn-outline-dark btn-sm">詳しく見る</a>
+                </div>
+                
+                <!-- KIDS -->
+                <div class="class-index-card kids" data-target="kids">
+                    <div class="class-index-icon kids">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="class-index-title">KIDS</h3>
+                    <p class="class-index-subtitle">S×Gスクール</p>
+                    <p class="class-index-description">護身術と体操で、お子さまの運動能力と自信を育てたい方向け</p>
+                    <div class="class-index-tags">
+                        <span class="tag">4歳〜小3</span>
+                        <span class="tag">護身術</span>
+                        <span class="tag">体操</span>
+                    </div>
+                    <a href="kids.html" class="btn btn-outline-dark btn-sm">詳しく見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 3: PHYSICAL Class Detail -->
+    <section class="class-detail-section" id="physical">
+        <div class="container">
+            <div class="class-detail-layout">
+                <div class="class-detail-text">
+                    <h2 class="class-detail-heading">
+                        <span class="class-label-badge physical">PHYSICAL</span>
+                        <span class="class-heading-main">フィジカルクラス</span>
+                    </h2>
+                    <p class="class-detail-tagline">筋トレとフィジカルトレーニングで「動けるカラダ」をつくる</p>
+                    
+                    <div class="class-detail-description">
+                        <p>
+                            フィジカルクラスでは、ダンベルや自重トレーニングを中心に、全身の筋力と体幹をバランス良く鍛えます。<br>
+                            体脂肪を落としながら筋肉量を増やすことで、見た目の引き締めはもちろん、日常生活やスポーツでのパフォーマンス向上も目指します。
+                        </p>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-dumbbell"></i> 主な内容</h4>
+                        <ul>
+                            <li>スクワット・デッドリフトなどの基礎筋力トレーニング</li>
+                            <li>体幹トレーニング・バランストレーニング</li>
+                            <li>サーキット形式の有酸素＋筋トレ</li>
+                            <li>柔軟性を高めるストレッチ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-heart"></i> こんな方におすすめ</h4>
+                        <ul>
+                            <li>健康的に体重を落としたい</li>
+                            <li>楽に動ける身体をつくりたい</li>
+                            <li>スポーツの基礎体力をアップしたい</li>
+                            <li>筋トレを一人で続けるのが苦手</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="class-flow-box">
+                        <h4><i class="fas fa-clock"></i> 1回の流れ（例：60分）</h4>
+                        <ol class="class-flow-list">
+                            <li><span class="flow-time">5〜10分</span> ウォームアップ</li>
+                            <li><span class="flow-time">30分</span> メインの筋力トレーニング</li>
+                            <li><span class="flow-time">10分</span> 体幹・バランストレーニング</li>
+                            <li><span class="flow-time">10分</span> クールダウン・ストレッチ</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="class-detail-cta">
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-lg">
+                            <i class="fab fa-line"></i> このクラスを体験する
+                        </a>
+                        <a href="#schedule" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-calendar"></i> スケジュールを確認する
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="class-detail-image">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=1000&fit=crop" alt="筋トレ・フィジカルトレーニングの様子">
+                    <div class="class-image-caption">ダンベルや自重トレーニングで全身を鍛えます</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 4: KICKBOXING Class Detail -->
+    <section class="class-detail-section alt-layout" id="kickboxing">
+        <div class="container">
+            <div class="class-detail-layout reverse">
+                <div class="class-detail-text">
+                    <h2 class="class-detail-heading">
+                        <span class="class-label-badge kickboxing">KICKBOXING</span>
+                        <span class="class-heading-main">キックボクシングクラス</span>
+                    </h2>
+                    <p class="class-detail-tagline">ミット打ちで脂肪燃焼＆ストレス解消</p>
+                    
+                    <div class="class-detail-description">
+                        <p>
+                            空手とキックボクシングの動きを取り入れたクラスです。<br>
+                            パンチやキックをミットに打ち込むことで、短時間で高いカロリー消費が期待できます。<br>
+                            正しいフォームをゼロから指導するので、格闘技が初めての方でも安心して参加できます。
+                        </p>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-hand-fist"></i> 主な内容</h4>
+                        <ul>
+                            <li>構え・ステップなどの基本動作の練習</li>
+                            <li>パンチ・キックのコンビネーション</li>
+                            <li>ミットトレーニング</li>
+                            <li>軽い対人ドリル（希望者）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-heart"></i> こんな方におすすめ</h4>
+                        <ul>
+                            <li>楽しく汗をかきながらダイエットしたい</li>
+                            <li>ストレスをスカッと発散したい</li>
+                            <li>抵抗力や瞬発力を身につけたい</li>
+                            <li>格闘技や護身術に興味がある</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="class-intensity-box">
+                        <h4><i class="fas fa-fire"></i> 強度目安</h4>
+                        <div class="intensity-bars">
+                            <div class="intensity-item">
+                                <span class="intensity-label">消費カロリー</span>
+                                <div class="intensity-bar">
+                                    <div class="intensity-fill" style="width: 90%;"></div>
+                                </div>
+                                <span class="intensity-value">高</span>
+                            </div>
+                            <div class="intensity-item">
+                                <span class="intensity-label">体力負荷</span>
+                                <div class="intensity-bar">
+                                    <div class="intensity-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="intensity-value">中〜高</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="class-detail-cta">
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-lg">
+                            <i class="fab fa-line"></i> キックボクシングを体験する
+                        </a>
+                        <a href="#pricing" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-yen-sign"></i> 料金プランを見る
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="class-detail-image">
+                    <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=1000&fit=crop" alt="キックボクシング・ミット打ちの様子">
+                    <div class="class-image-caption">初心者も女性も安心して参加できます</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 5: PERSONAL Training Detail -->
+    <section class="class-detail-section" id="personal">
+        <div class="container">
+            <div class="class-detail-layout">
+                <div class="class-detail-text">
+                    <h2 class="class-detail-heading">
+                        <span class="class-label-badge personal">PERSONAL</span>
+                        <span class="class-heading-main">パーソナルトレーニング</span>
+                    </h2>
+                    <p class="class-detail-tagline">完全個室で、目標に合わせた短期集中プログラム</p>
+                    
+                    <div class="class-detail-description">
+                        <p>
+                            「確実に結果を出したい」「人目を気にせずトレーニングしたい」方にはパーソナルが最適です。<br>
+                            カウンセリングで目標や生活習慣をお伺いし、食事アドバイスも含めたオーダーメイドのプランを作成。<br>
+                            週◯回・約3ヶ月を目安に、理想の体型とコンディションを目指します。
+                        </p>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-heart"></i> こんな方におすすめ</h4>
+                        <ul>
+                            <li>明確な期限までに体を変えたい（例：結婚式・試合など）</li>
+                            <li>自分に合ったトレーニングを知りたい</li>
+                            <li>グループレッスンが苦手</li>
+                            <li>既にトレーニング経験があり、さらにレベルアップしたい</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="personal-pricing-digest">
+                        <h4><i class="fas fa-yen-sign"></i> 料金ダイジェスト</h4>
+                        <div class="pricing-digest-grid">
+                            <div class="pricing-digest-item">
+                                <div class="pricing-digest-label">パーソナル 1回（60分）</div>
+                                <div class="pricing-digest-price">¥6,600<span class="tax-note">（税込）</span></div>
+                            </div>
+                            <div class="pricing-digest-item">
+                                <div class="pricing-digest-label">ペア（2名）1回</div>
+                                <div class="pricing-digest-price">¥8,800<span class="tax-note">（税込）</span></div>
+                            </div>
+                            <div class="pricing-digest-item">
+                                <div class="pricing-digest-label">グループ（3〜6名）1回/人</div>
+                                <div class="pricing-digest-price">¥3,300<span class="tax-note">（税込）</span></div>
+                            </div>
+                        </div>
+                        <p class="pricing-note-small">※詳細は<a href="#pricing">料金プランセクション</a>をご覧ください</p>
+                    </div>
+                    
+                    <div class="class-detail-cta">
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-lg">
+                            <i class="fab fa-line"></i> パーソナルの相談をする
+                        </a>
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-calendar-check"></i> 体験パーソナルを予約する
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="class-detail-image">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=1000&fit=crop" alt="パーソナルトレーニングの様子">
+                    <div class="class-image-caption">マンツーマンで目標達成をサポート</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 6: DANCE Class Detail -->
+    <section class="class-detail-section alt-layout dance-section" id="dance">
+        <div class="container">
+            <div class="class-detail-layout reverse">
+                <div class="class-detail-text">
+                    <h2 class="class-detail-heading">
+                        <span class="class-label-badge dance">DANCE</span>
+                        <span class="class-heading-main">ダンスクラス</span>
+                    </h2>
+                    <p class="class-detail-tagline">ストレッチ×体幹×ダンスで、しなやかな身体づくり</p>
+                    
+                    <div class="class-detail-description">
+                        <p>
+                            ストレッチと体幹トレーニング、簡単な振り付けを組み合わせたダンスクラスです。<br>
+                            音楽に合わせて楽しく身体を動かしながら、姿勢や柔軟性も整えていきます。<br>
+                            ダンス未経験の方でも、ゆっくり丁寧に進めるので安心してご参加いただけます。
+                        </p>
+                    </div>
+                    
+                    <div class="class-detail-box">
+                        <h4><i class="fas fa-heart"></i> こんな方におすすめ</h4>
+                        <ul>
+                            <li>運動不足だけど、キツい筋トレは苦手</li>
+                            <li>音楽に合わせて楽しく汗をかきたい</li>
+                            <li>しなやかな身体になりたい</li>
+                            <li>ダンスを始めてみたい</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="class-detail-cta">
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-lg">
+                            <i class="fab fa-line"></i> ダンスクラスを体験する
+                        </a>
+                        <a href="#schedule" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-calendar"></i> スケジュールを確認する
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="class-detail-image">
+                    <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&h=1000&fit=crop" alt="ダンスクラスの様子">
+                    <div class="class-image-caption">楽しく踊って、しなやかな身体に</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 7: KIDS Class Intro -->
+    <section class="kids-intro-section" id="kids-intro">
+        <div class="container">
+            <div class="kids-intro-content">
+                <div class="kids-intro-header">
+                    <div class="kids-badge">
+                        <span class="kids-badge-logo">S×G</span>
+                        <span class="kids-badge-text">School</span>
+                    </div>
+                    <h2 class="kids-intro-title">KIDSクラス（S×Gスクール）</h2>
+                </div>
+                
+                <p class="kids-intro-lead">
+                    小学生〜中学生向けには、「護身術 × 体操」を組み合わせたオリジナルプログラムをご用意しています。<br>
+                    運動能力だけでなく、集中力・礼儀・自己肯定感を育てることを大切にしています。
+                </p>
+                
+                <div class="kids-features-grid">
+                    <div class="kids-feature-card">
+                        <div class="kids-feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>護身術を学ぶ</h3>
+                        <p>自分の身を守る力を身につけ、危険を回避する判断力を養います</p>
+                    </div>
+                    
+                    <div class="kids-feature-card">
+                        <div class="kids-feature-icon">
+                            <i class="fas fa-child-reaching"></i>
+                        </div>
+                        <h3>運動神経を育てる</h3>
+                        <p>体操や基礎運動で、運動能力と身体バランスを向上させます</p>
+                    </div>
+                    
+                    <div class="kids-feature-card">
+                        <div class="kids-feature-icon">
+                            <i class="fas fa-handshake-angle"></i>
+                        </div>
+                        <h3>礼儀を身につける</h3>
+                        <p>あいさつや礼儀作法を通じて、社会性とマナーを学びます</p>
+                    </div>
+                </div>
+                
+                <div class="kids-pricing-summary">
+                    <h3><i class="fas fa-yen-sign"></i> 料金（抜粋）</h3>
+                    <p class="kids-price-main">月額 <strong>¥7,700</strong><span class="tax-note">（税込）</span>〜</p>
+                    <p class="kids-price-note">※兄弟割引などの詳細はお問い合わせください</p>
+                </div>
+                
+                <div class="kids-intro-cta">
+                    <a href="kids.html" class="btn btn-primary btn-xl">
+                        <i class="fas fa-child"></i> キッズクラスの詳細を見る
+                    </a>
+                    <a href="#" onclick="openLineReservation(event)" class="btn btn-outline-dark btn-xl">
+                        <i class="fab fa-line"></i> 体験レッスンを予約する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 8: Pricing Digest -->
+    <section class="pricing-digest-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">料金プラン（月謝制）</h2>
+            <p class="section-subtitle">
+                ライフスタイルと目標に合わせて選べる月額プランをご用意しています。<br>
+                どのプランでも、スケジュール内のクラスを自由に組み合わせて受講できます。
+            </p>
+            
+            <!-- Pricing Table -->
+            <div class="pricing-table-wrapper">
+                <table class="pricing-table-main">
+                    <thead>
+                        <tr>
+                            <th>プラン名</th>
+                            <th>月回数</th>
+                            <th>男性</th>
+                            <th>女性</th>
+                            <th>こんな方におすすめ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pricing-row-entry">
+                            <td><strong>入会金</strong></td>
+                            <td>初回のみ</td>
+                            <td>¥33,000</td>
+                            <td>¥33,000</td>
+                            <td>初回登録時に必要です</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1DAYコース</strong></td>
+                            <td>月1回</td>
+                            <td>¥3,300</td>
+                            <td>¥3,300</td>
+                            <td>体験後に時々通いたい方</td>
+                        </tr>
+                        <tr class="pricing-row-highlight">
+                            <td><strong>ベーシック</strong><span class="recommend-badge">おすすめ</span></td>
+                            <td>月4回</td>
+                            <td>¥8,800</td>
+                            <td>¥6,600</td>
+                            <td>無理なく継続したい方</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ライト</strong></td>
+                            <td>月8回</td>
+                            <td>¥11,000</td>
+                            <td>¥8,800</td>
+                            <td>週1〜2回しっかり通いたい方</td>
+                        </tr>
+                        <tr>
+                            <td><strong>レギュラー</strong></td>
+                            <td>通い放題</td>
+                            <td>¥15,400</td>
+                            <td>¥13,200</td>
+                            <td>思い切りトレーニングしたい方</td>
+                        </tr>
+                        <tr>
+                            <td><strong>超過利用</strong></td>
+                            <td>＋1回</td>
+                            <td>¥3,300</td>
+                            <td>¥3,300</td>
+                            <td>回数を追加したい時に</td>
+                        </tr>
+                        <tr class="pricing-row-personal">
+                            <td><strong>パーソナル</strong></td>
+                            <td>1回（要予約）</td>
+                            <td>¥6,600</td>
+                            <td>−</td>
+                            <td>マンツーマンで集中したい方</td>
+                        </tr>
+                        <tr class="pricing-row-personal">
+                            <td><strong>ペア</strong></td>
+                            <td>1回（要予約）</td>
+                            <td>¥8,800</td>
+                            <td>−</td>
+                            <td>友人・ご夫婦で</td>
+                        </tr>
+                        <tr class="pricing-row-personal">
+                            <td><strong>グループ（3〜6人）</strong></td>
+                            <td>1回（要予約）</td>
+                            <td>¥3,300/人</td>
+                            <td>−</td>
+                            <td>仲間と楽しく通いたい方</td>
+                        </tr>
+                        <tr class="pricing-row-kids">
+                            <td><strong>S×G（キッズ）</strong></td>
+                            <td>月額</td>
+                            <td>¥7,700</td>
+                            <td>−</td>
+                            <td>小〜中学生向け</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Mobile Pricing Cards -->
+            <div class="mobile-pricing-list">
+                <!-- 入会金 -->
+                <div class="mobile-pricing-item">
+                    <h4>入会金</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">初回のみ</span>
+                        <span class="price">¥33,000</span>
+                    </div>
+                    <p class="description">初回登録時に必要です</p>
+                </div>
+                
+                <!-- 1DAY -->
+                <div class="mobile-pricing-item">
+                    <h4>1DAYコース</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">月1回</span>
+                        <span class="price">男女 ¥3,300</span>
+                    </div>
+                    <p class="description">体験後に時々通いたい方</p>
+                </div>
+                
+                <!-- ベーシック -->
+                <div class="mobile-pricing-item highlight">
+                    <span class="mobile-recommend-badge">おすすめ</span>
+                    <h4>ベーシック</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">月4回</span>
+                        <span class="price">男性 ¥8,800 / 女性 ¥6,600</span>
+                    </div>
+                    <p class="description">無理なく継続したい方</p>
+                </div>
+                
+                <!-- ライト -->
+                <div class="mobile-pricing-item">
+                    <h4>ライト</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">月8回</span>
+                        <span class="price">男性 ¥11,000 / 女性 ¥8,800</span>
+                    </div>
+                    <p class="description">週1〜2回しっかり通いたい方</p>
+                </div>
+                
+                <!-- レギュラー -->
+                <div class="mobile-pricing-item">
+                    <h4>レギュラー</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">通い放題</span>
+                        <span class="price">男性 ¥15,400 / 女性 ¥13,200</span>
+                    </div>
+                    <p class="description">思い切りトレーニングしたい方</p>
+                </div>
+                
+                <!-- パーソナル -->
+                <div class="mobile-pricing-item personal">
+                    <h4>パーソナル</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">1回（要予約）</span>
+                        <span class="price">¥6,600</span>
+                    </div>
+                    <p class="description">マンツーマンで集中したい方</p>
+                </div>
+                
+                <!-- S×G -->
+                <div class="mobile-pricing-item kids">
+                    <h4>S×G（キッズ）</h4>
+                    <div class="mobile-pricing-row">
+                        <span class="label">月額</span>
+                        <span class="price">¥7,700〜</span>
+                    </div>
+                    <p class="description">小〜中学生向け</p>
+                </div>
+            </div>
+            
+            <div class="pricing-notes-box">
+                <p class="pricing-note-text">※ 表示価格はすべて税込です。詳細・最新情報はお問い合わせください。</p>
+            </div>
+            
+            <div class="pricing-section-cta">
+                <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl">
+                    <i class="fab fa-line"></i> このプランで無料体験する
+                </a>
+                <a href="https://stores.jp/challenger-gym" target="_blank" rel="noopener" class="btn btn-outline-dark btn-xl">
+                    <i class="fas fa-calendar-check"></i> Storesでコースを予約する
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 9: Schedule & FAQ -->
+    <section class="schedule-faq-section" id="schedule">
+        <div class="container">
+            <!-- Schedule -->
+            <div class="schedule-block" id="schedule">
+                <h2 class="section-title">スケジュール</h2>
+                <p class="section-subtitle">各クラスの開催スケジュールは、PDFでご確認いただけます。</p>
+                
+                <div class="schedule-download-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="schedule-info">
+                        <h3>クラススケジュール（PDF）</h3>
+                        <p>最新のタイムテーブルをダウンロード・閲覧できます</p>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="alert('スケジュールPDFは準備中です。詳しくはLINEまたは電話でお問い合わせください。'); return false;">
+                        <i class="fas fa-download"></i> ダウンロード
+                    </a>
+                </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="faq-block">
+                <h2 class="section-title">よくある質問（FAQ）</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>「筋トレクラス」に入会したら、他のクラスには出られませんか？</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>どの月額プランでも、スケジュール内のクラスは自由に受講できます（女子・キッズなど一部のクラスは対象者限定です）。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>ベーシック（月4回）での通い方の例は？</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>例：筋トレ1回＋キック1回＋ダンス2回など、その週の予定に合わせて組み合わせ自由です。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>他のジムとの違いは？</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>多くのジムは種目ごとに料金が分かれていますが、Challenger GYM は「一定の会費で複数クラスに参加できる」ことが特徴です。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>持ち物は？</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>動きやすい服装・飲み物・タオル。初回は5〜10分前のご来館をお願いしています。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>女子・キッズクラスのルールは？</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>女子クラスは女性限定、キッズクラスは対象年齢のお子さま限定です。親子で参加できるファミリークラスもあります。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-cta">
+                    <p>さらに気になることがあれば、LINEでお気軽にご質問ください。</p>
+                    <div class="faq-cta-buttons">
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-lg">
+                            <i class="fab fa-line"></i> LINEで質問する
+                        </a>
+                        <a href="#" onclick="openLineReservation(event)" class="btn btn-secondary btn-lg">
+                            <i class="fab fa-line"></i> 無料体験を予約する
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Challenger GYM</h3>
+                    <p class="footer-text">東村山・秋津エリアの格闘技×パーソナルトレーニングジム</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/challenger__gym/" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rikito_daikoku" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://twitter.com/challenger_gym" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">アクセス</h4>
+                    <p class="footer-text">
+                        〒189-0001<br>
+                        東京都東村山市秋津町5-6-12<br>
+                        新秋津駅 徒歩2分・秋津駅 徒歩5分
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">お問い合わせ</h4>
+                    <p class="footer-text">
+                        <i class="fas fa-phone"></i> 042-505-9323<br>
+                        <i class="fas fa-envelope"></i> info@challenger-gym.com
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">営業時間</h4>
+                    <p class="footer-text">
+                        月〜日: 10:00〜22:00<br>
+                        定休日: 不定休
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Challenger GYM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

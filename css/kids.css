@@ -1,0 +1,1587 @@
+/* ================================================
+   Kids Page (S×G School) Styles
+   Challenger GYM - キッズクラス専用CSS
+   ================================================ */
+
+/* ================================================
+   1. S×G Logo Badge
+   ================================================ */
+.sxg-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 14px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 32px;
+}
+
+.sxg-logo-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+}
+
+.sxg-logo-sub {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ================================================
+   2. Kids Hero Section
+   ================================================ */
+.kids-hero {
+    position: relative;
+    padding: 180px 0 100px;
+    margin-top: 70px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.kids-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.kids-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.kids-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.85) 0%,
+        rgba(139, 92, 246, 0.75) 50%,
+        rgba(16, 185, 129, 0.65) 100%
+    );
+    z-index: 2;
+}
+
+.kids-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.kids-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.kids-hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 32px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.02em;
+}
+
+.kids-hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.kids-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+    justify-content: center;
+}
+
+.kids-badge {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.kids-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background: #fff;
+}
+
+.kids-badge i {
+    color: #3b82f6;
+    font-size: 1.1rem;
+}
+
+.kids-hero-cta {
+    text-align: center;
+}
+
+.kids-btn-primary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 20px 40px;
+    font-size: 1.15rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 30px rgba(16, 185, 129, 0.5);
+    transition: all 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+}
+
+.kids-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 35px rgba(16, 185, 129, 0.6);
+    color: #fff;
+}
+
+.kids-cta-note {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sp-br {
+    display: none;
+}
+
+/* ================================================
+   3. About S×G Section
+   ================================================ */
+.kids-about-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.kids-about-lead {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-light);
+}
+
+.kids-about-lead strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.kids-about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.kids-about-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.kids-about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+}
+
+.kids-about-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.kids-about-icon.body {
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+}
+
+.kids-about-icon.mind {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.kids-about-icon.defence {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.kids-about-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.kids-about-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* ================================================
+   4. Program Content Section
+   ================================================ */
+.kids-program-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.program-block {
+    margin-bottom: 80px;
+}
+
+.program-block:last-child {
+    margin-bottom: 0;
+}
+
+.program-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.program-content.reverse {
+    direction: rtl;
+}
+
+.program-content.reverse > * {
+    direction: ltr;
+}
+
+.program-text {
+    z-index: 1;
+}
+
+.program-title {
+    margin-bottom: 16px;
+}
+
+.program-label {
+    display: inline-block;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.program-label.gymnastics {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.program-label.defence {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.program-heading {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 8px;
+}
+
+.program-tagline {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.program-description {
+    margin-bottom: 24px;
+}
+
+.program-description p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.program-features li:last-child {
+    border-bottom: none;
+}
+
+.program-features i {
+    color: #10b981;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.program-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.program-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Lesson Flow */
+.lesson-flow {
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 80px;
+}
+
+.lesson-flow-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.lesson-timeline {
+    position: relative;
+    padding-left: 100px;
+}
+
+.lesson-timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-time {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -67px;
+    top: 12px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: #f8fafc;
+    padding: 24px 28px;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================================
+   5. Safety & Policy Section
+   ================================================ */
+.kids-safety-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.safety-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+    padding: 40px 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.safety-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: #10b981;
+}
+
+.safety-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.safety-icon i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.safety-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.safety-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* ================================================
+   6. Testimonials Section
+   ================================================ */
+.kids-testimonials-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.testimonial-icon i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-author {
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.author-name {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* ================================================
+   7. Pricing Section
+   ================================================ */
+.kids-pricing-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.pricing-main {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+    padding: 60px 50px;
+    border-radius: 30px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid #3b82f6;
+}
+
+.pricing-description {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 2px dashed #e5e7eb;
+}
+
+.pricing-description p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    text-align: left;
+}
+
+.pricing-description strong {
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.pricing-notes {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    background: #f8fafc;
+    padding: 32px 40px;
+    border-radius: 20px;
+    border: 2px solid #e5e7eb;
+}
+
+.pricing-notes h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pricing-notes h4 i {
+    color: #3b82f6;
+}
+
+.pricing-notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-notes li {
+    padding: 10px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.pricing-notes li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pricing-cta {
+    text-align: center;
+}
+
+.pricing-highlight {
+    margin-bottom: 32px;
+}
+
+.pricing-lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.pricing-amount {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #3b82f6;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.pricing-tax {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.pricing-feature {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.sibling-discount {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    padding: 24px 32px;
+    border-radius: 20px;
+    border: 2px solid #10b981;
+}
+
+.discount-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #10b981;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.discount-text {
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.discount-text strong {
+    color: #059669;
+    font-weight: 700;
+}
+
+.pricing-details {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 2px dashed #e5e7eb;
+    text-align: left;
+}
+
+.pricing-details h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.pricing-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-details li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+.pricing-details li:last-child {
+    border-bottom: none;
+}
+
+.pricing-details .label {
+    color: var(--text-light);
+}
+
+.pricing-details .value {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ================================================
+   8. Schedule Section
+   ================================================ */
+.kids-schedule-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.schedule-lead {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* Schedule Download Card - Horizontal Layout */
+.schedule-download-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 32px 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.schedule-download-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.schedule-download-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.schedule-download-info {
+    flex: 1;
+    text-align: left;
+}
+
+.schedule-download-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.schedule-download-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.schedule-download-btn {
+    flex-shrink: 0;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.schedule-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.schedule-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+    color: #fff;
+}
+
+/* ================================================
+   9. Trial Section
+   ================================================ */
+.kids-trial-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.trial-lead {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 48px;
+}
+
+.trial-content {
+    max-width: 900px;
+    margin: 0 auto 48px;
+}
+
+.trial-info {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.trial-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trial-info h3:first-child {
+    margin-top: 0;
+}
+
+.trial-info h3 i {
+    color: #10b981;
+}
+
+.trial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trial-list li {
+    padding: 12px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.trial-list li:last-child {
+    border-bottom: none;
+}
+
+.trial-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.trial-steps-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trial-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.trial-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trial-box h3 i {
+    color: #10b981;
+    font-size: 1.6rem;
+}
+
+.trial-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trial-box li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.trial-box li:last-child {
+    border-bottom: none;
+}
+
+.trial-box li i {
+    color: #10b981;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* Trial Steps Container */
+.trial-step-card {
+    flex: 1;
+    min-width: 0;
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.trial-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.step-badge {
+    display: inline-block;
+    background: #3b82f6;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.step-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.step-arrow {
+    font-size: 2rem;
+    color: #3b82f6;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.trial-cta {
+    text-align: center;
+    margin-top: 48px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ================================================
+   10. FAQ Section
+   ================================================ */
+.kids-faq-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.faq-question i {
+    color: #3b82f6;
+    font-size: 1.3rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.faq-question span {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.faq-answer {
+    padding: 0 28px 24px 60px;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.faq-cta p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+/* ================================================
+   11. Final CTA Section
+   ================================================ */
+.kids-final-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
+    text-align: center;
+}
+
+.kids-final-cta .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.kids-final-cta h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+}
+
+.kids-final-cta p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* ================================================
+   12. Responsive Design
+   ================================================ */
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+    .kids-about-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .program-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .program-content.reverse {
+        direction: ltr;
+    }
+
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trial-steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .trial-step::after {
+        display: none;
+    }
+
+    .lesson-timeline {
+        padding-left: 80px;
+    }
+
+    .timeline-time {
+        left: -80px;
+    }
+
+    .timeline-item::before {
+        left: -47px;
+    }
+
+    .lesson-timeline::before {
+        left: 30px;
+    }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+    .kids-hero {
+        padding: 120px 0 60px;
+        min-height: 500px;
+    }
+    
+    .kids-hero-background img {
+        object-position: center 30%;
+    }
+
+    .kids-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .kids-hero-lead {
+        font-size: 1.05rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .program-heading {
+        font-size: 1.6rem;
+    }
+
+    .pricing-amount {
+        font-size: 3rem;
+    }
+
+    .pricing-box {
+        padding: 40px 30px;
+    }
+
+    .lesson-flow {
+        padding: 40px 30px;
+    }
+
+    .lesson-timeline {
+        padding-left: 60px;
+    }
+
+    .timeline-time {
+        left: -60px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .timeline-item::before {
+        left: -37px;
+    }
+
+    .lesson-timeline::before {
+        left: 25px;
+    }
+
+    .faq-answer {
+        padding-left: 28px;
+    }
+
+    /* Schedule Download Card - Mobile */
+    .schedule-download-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+    }
+
+    .schedule-download-info {
+        text-align: center;
+    }
+
+    .schedule-download-btn {
+        width: 100%;
+    }
+
+    .trial-steps .trial-step {
+        padding: 20px 24px;
+    }
+    
+    .trial-steps .trial-step::after {
+        left: 25px;
+        height: 20px;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .step-content h4 {
+        font-size: 1.15rem;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Trial Steps Responsive */
+    .trial-steps-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .trial-step-card {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        font-size: 2.5rem;
+    }
+
+    .step-title {
+        font-size: 1.1rem;
+    }
+
+    .step-description {
+        font-size: 0.85rem;
+    }
+
+    .sp-br {
+        display: inline;
+    }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+    .kids-hero {
+        padding: 100px 0 50px;
+        min-height: 500px;
+    }
+
+    .kids-hero-title {
+        font-size: 1.7rem;
+        letter-spacing: 0.01em;
+    }
+
+    .kids-hero-lead {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .kids-hero-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kids-badge {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+
+    .kids-btn-primary {
+        width: 100%;
+        justify-content: center;
+        font-size: 1.05rem;
+        padding: 18px 28px;
+    }
+    
+    .sxg-logo-badge {
+        padding: 12px 24px;
+    }
+    
+    .sxg-logo-text {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .sxg-logo-sub {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .sxg-logo-badge {
+        padding: 10px 18px;
+    }
+
+    .sxg-logo-text {
+        font-size: 1.2rem;
+    }
+
+    .sxg-logo-sub {
+        font-size: 0.8rem;
+    }
+
+    .kids-about-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .kids-about-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .program-heading {
+        font-size: 1.4rem;
+    }
+
+    .lesson-flow {
+        padding: 24px 20px;
+    }
+
+    .lesson-timeline {
+        padding-left: 50px;
+    }
+
+    .timeline-time {
+        left: -50px;
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    .timeline-item::before {
+        left: -32px;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+
+    .lesson-timeline::before {
+        left: 20px;
+        width: 2px;
+    }
+
+    .pricing-amount {
+        font-size: 2.5rem;
+    }
+
+    .pricing-feature {
+        font-size: 1.1rem;
+    }
+
+    .pricing-main {
+        padding: 32px 20px;
+    }
+
+    .sibling-discount {
+        padding: 20px 24px;
+    }
+
+    .schedule-download-card {
+        padding: 24px 20px;
+    }
+
+    .schedule-download-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .schedule-download-info p {
+        font-size: 0.85rem;
+    }
+
+    .schedule-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .trial-box {
+        padding: 24px 20px;
+    }
+
+    .trial-info {
+        padding: 32px 20px;
+    }
+    
+    .trial-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .trial-steps {
+        padding: 32px 20px;
+    }
+    
+    .trial-steps > h3 {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+    }
+    
+    .trial-steps .trial-step {
+        padding: 18px 20px;
+        gap: 16px;
+    }
+    
+    .trial-steps .trial-step::after {
+        left: 23px;
+        height: 20px;
+    }
+    
+    .step-number {
+        width: 46px;
+        height: 46px;
+        font-size: 1.4rem;
+    }
+    
+    .step-content h4 {
+        font-size: 1.05rem;
+    }
+    
+    .step-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Trial Steps for Small Mobile */
+    .trial-step-card {
+        padding: 28px 20px;
+    }
+
+    .step-badge {
+        font-size: 0.8rem;
+        padding: 6px 16px;
+    }
+
+    .step-title {
+        font-size: 1rem;
+    }
+
+    .step-description {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .step-arrow {
+        font-size: 2rem;
+    }
+
+    .trial-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trial-cta .btn {
+        width: 100%;
+    }
+
+    .faq-question {
+        padding: 18px 20px;
+    }
+
+    .faq-answer {
+        padding: 0 20px 18px 20px;
+    }
+}

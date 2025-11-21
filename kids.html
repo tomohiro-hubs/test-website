@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S×Gクラス（キッズトレーニング）| Challenger GYM - 4歳〜小学3年生の護身術×体操</title>
+    <meta name="description" content="護身術×体操で「自分を守れる強さ」と「一生動けるからだ」を育てる。4歳〜小学3年生対象。月額¥7,700で通い放題。兄弟割引あり。無料体験受付中。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kids.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Challenger <span class="logo-accent">GYM</span></span>
+                        <span class="logo-subtitle">秋津・新秋津</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu desktop-menu">
+                    <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="classes.html" class="nav-link">CLASS & PRICE</a></li>
+                    <li><a href="kids.html" class="nav-link active">KIDS</a></li>
+                    <li><a href="trainers.html" class="nav-link">TRAINERS</a></li>
+                    <li><a href="index.html#voices" class="nav-link">VOICES</a></li>
+                    <li><a href="index.html#access" class="nav-link">ACCESS</a></li>
+                    <li class="nav-cta">
+                        <a href="#" class="btn btn-primary header-cta" onclick="openLineReservation(event)">
+                            <i class="fab fa-line"></i> 無料体験予約
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html#about" class="mobile-nav-link">ABOUT</a></li>
+                <li><a href="classes.html" class="mobile-nav-link">CLASS & PRICE</a></li>
+                <li><a href="kids.html" class="mobile-nav-link">KIDS</a></li>
+                <li><a href="index.html#voices" class="mobile-nav-link">VOICES</a></li>
+                <li><a href="index.html#access" class="mobile-nav-link">ACCESS</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Fixed CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0425059323" class="mobile-cta-btn">
+            <i class="fas fa-phone"></i>
+            <span>電話で相談</span>
+        </a>
+        <a href="#" onclick="openLineReservation(event)" class="mobile-cta-btn mobile-cta-primary">
+            <i class="fab fa-line"></i>
+            <span>LINEで体験予約</span>
+        </a>
+    </div>
+    
+    <!-- Floating CTA Button (PC) -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#" onclick="openLineReservation(event)" class="floating-cta-btn">
+            <i class="fab fa-line"></i>
+            <span class="floating-cta-text">無料体験予約</span>
+            <span class="floating-cta-subtext">「SG体験希望」と送信</span>
+        </a>
+    </div>
+    
+    <!-- Section 1: Hero -->
+    <section class="kids-hero">
+        <div class="kids-hero-background">
+            <img src="https://www.genspark.ai/api/files/s/umbe8c7p" alt="Challenger GYM - 子どもたちがトレーナーと一緒にキックの練習をしている様子">
+            <div class="kids-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="kids-hero-content">
+                <div class="sxg-logo-badge">
+                    <span class="sxg-logo-text">S×G</span>
+                    <span class="sxg-logo-sub">School</span>
+                </div>
+                
+                <h1 class="kids-hero-title">
+                    護身術 × 体操で、<br>
+                    「自分を守れる強さ」と<br class="sp-br">「一生動けるからだ」を育てる。
+                </h1>
+                
+                <p class="kids-hero-lead">
+                    S×Gクラスは、4歳〜小学3年生を対象にしたキッズトレーニングクラスです。<br>
+                    体操でからだの使い方を学びながら、格闘技の基礎と実践的な護身術を楽しく身につけます。<br>
+                    運動が苦手なお子さまも、遊びを取り入れたレッスンで自然と「できた！」を積み重ねていきます。
+                </p>
+                
+                <div class="kids-hero-badges">
+                    <span class="kids-badge"><i class="fas fa-child"></i> 対象：4歳〜小学3年生</span>
+                    <span class="kids-badge"><i class="fas fa-users"></i> 少人数制・安全第一</span>
+                    <span class="kids-badge"><i class="fas fa-heart"></i> 体操＋護身術＋礼儀</span>
+                </div>
+                
+                <div class="kids-hero-cta">
+                    <a href="#trial" class="btn btn-primary btn-xl kids-btn-primary">
+                        <i class="fab fa-line"></i> 無料体験レッスンを申し込む
+                    </a>
+                    <p class="kids-cta-note">LINEで「SG体験希望」と送るだけ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: About S×G -->
+    <section class="kids-about-section">
+        <div class="container">
+            <h2 class="section-title">S×Gクラスについて</h2>
+            
+            <p class="kids-about-lead">
+                S×Gは「<strong>Self-Defense × Gymnastics</strong>」を組み合わせた、Challenger GYMオリジナルのキッズトレーニングクラスです。<br>
+                体操で基礎運動能力とバランス感覚を育てながら、格闘技の基本動作と護身術を学ぶことで、<br>
+                お子さまが自分の身を守り、自信を持って行動できるようになることを目指します。
+            </p>
+            
+            <div class="kids-about-cards">
+                <div class="kids-about-card">
+                    <div class="kids-about-icon body">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>からだの力</h3>
+                    <p>体操やマット運動で、柔軟性・バランス・体幹を育てます。</p>
+                </div>
+                
+                <div class="kids-about-card">
+                    <div class="kids-about-icon mind">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>こころの力</h3>
+                    <p>あいさつ・礼儀・順番待ち・我慢する力など、集団行動の中で社会性を学びます。</p>
+                </div>
+                
+                <div class="kids-about-card">
+                    <div class="kids-about-icon defence">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>護身の力</h3>
+                    <p>危険から距離を取る・大きな声を出す・逃げる判断など、「自分を守るための行動」を身につけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 3: Program Content -->
+    <section class="kids-program-section">
+        <div class="container">
+            <h2 class="section-title">レッスン内容</h2>
+            
+            <!-- Gymnastics -->
+            <div class="program-block">
+                <div class="program-content">
+                    <div class="program-text">
+                        <h3 class="program-title">
+                            <span class="program-label gymnastics">Gymnastics</span>
+                            <span class="program-heading">体操技術</span>
+                        </h3>
+                        <p class="program-tagline">成長期に必要な柔軟性とバランス感覚を育てる</p>
+                        
+                        <div class="program-description">
+                            <p>
+                                マット運動やジャンプ、バランス遊びを通して、成長期に大切な柔軟性とバランス感覚を養います。<br>
+                                遊びの要素を取り入れながら、前まわり・後ろまわりなど学校体操で必要な技にもチャレンジ。<br>
+                                「できた！」という成功体験を重ねることで、運動への苦手意識を減らしていきます。
+                            </p>
+                        </div>
+                        
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> マット運動（前転・後転など）</li>
+                            <li><i class="fas fa-check"></i> バランス遊び・体幹トレーニング</li>
+                            <li><i class="fas fa-check"></i> ジャンプ・かけっこなど基礎運動</li>
+                            <li><i class="fas fa-check"></i> 柔軟性を高めるストレッチ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-image">
+                        <img src="https://www.genspark.ai/api/files/s/obYvmQxk" alt="体操・マット運動の様子">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Defence -->
+            <div class="program-block alt">
+                <div class="program-content reverse">
+                    <div class="program-text">
+                        <h3 class="program-title">
+                            <span class="program-label defence">Defence</span>
+                            <span class="program-heading">格闘技・護身術</span>
+                        </h3>
+                        <p class="program-tagline">基本から身につく"自分を守るための動き"</p>
+                        
+                        <div class="program-description">
+                            <p>
+                                空手やボクシングの基本動作をベースに、パンチ・キック・受け身の動きを練習します。<br>
+                                そのうえで、「近づかれたときにどうするか」「つかまれたときにどう離れるか」など、<br>
+                                実際の場面を想定した護身術も、ゲーム感覚で楽しく身につけていきます。<br>
+                                少人数制なので、一人ひとりの性格や体力に合わせて丁寧に指導します。
+                            </p>
+                        </div>
+                        
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> 基本の構え・ステップ</li>
+                            <li><i class="fas fa-check"></i> パンチ・キックの動き</li>
+                            <li><i class="fas fa-check"></i> 受け身・転び方の練習</li>
+                            <li><i class="fas fa-check"></i> 実践的な護身術（離れ方・大声の出し方）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=700&h=600&fit=crop" alt="護身術・格闘技の様子">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lesson Flow -->
+            <div class="lesson-flow">
+                <h3 class="lesson-flow-title">1回のレッスンの流れ（60分）</h3>
+                
+                <div class="lesson-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">5分</div>
+                        <div class="timeline-content">
+                            <h4>あいさつ・出欠確認</h4>
+                            <p>元気にあいさつして、今日の気分や体調を確認</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">10分</div>
+                        <div class="timeline-content">
+                            <h4>ウォームアップ・柔軟</h4>
+                            <p>走ったり跳んだり、体をほぐして準備運動</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">20分</div>
+                        <div class="timeline-content">
+                            <h4>体操パート</h4>
+                            <p>マット運動やバランス遊びで体幹を鍛える</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">20分</div>
+                        <div class="timeline-content">
+                            <h4>護身術・格闘技パート</h4>
+                            <p>パンチ・キック、護身術の動きを練習</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-time">5分</div>
+                        <div class="timeline-content">
+                            <h4>ふり返り・あいさつ</h4>
+                            <p>今日できたことを確認して、元気にあいさつ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 4: Safety & Policy -->
+    <section class="kids-safety-section">
+        <div class="container">
+            <h2 class="section-title">安心してお任せいただくために</h2>
+            
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>少人数制で目が届く環境</h3>
+                    <p>レッスンは定員を設け、一人ひとりの様子をしっかり見ながら進めます。</p>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-child-reaching"></i>
+                    </div>
+                    <h3>年齢と発達段階に合わせたメニュー</h3>
+                    <p>4歳と小学生ではできることが違うため、レベル別に内容を調整しています。</p>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>「叱る」より「認める」指導</h3>
+                    <p>できなかったことを責めるのではなく、挑戦したことを褒めるスタイルを大切にしています。</p>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>ケガ予防のルール徹底</h3>
+                    <p>ウォームアップや整理体操、ルール説明を丁寧に行い、安全第一で進めます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 5: Testimonials -->
+    <section class="kids-testimonials-section">
+        <div class="container">
+            <h2 class="section-title">保護者さまの声</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        運動が苦手で体育の時間を嫌がっていましたが、S×Gに通い始めてからは『見てて！』と自分から前転を見せてくれるようになりました。
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">小学1年生 保護者さま</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        護身術のレッスンで、危ない場所に近づかないことや、大きな声を出す練習をしていると聞き、親としてもとても安心感があります。
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">年長 保護者さま</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        兄弟で通っていますが、家でもお互いにストレッチを教え合ったりと、良い意味でライバルになっています。
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">小学2年・年中 保護者さま</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 6: Pricing -->
+    <section class="kids-pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">料金（月謝制）</h2>
+            
+            <div class="pricing-main">
+                <div class="pricing-highlight">
+                    <p class="pricing-lead">月々</p>
+                    <p class="pricing-amount">¥7,700<span class="pricing-tax">（税込）</span></p>
+                    <p class="pricing-feature">で、クラス通い放題</p>
+                </div>
+                
+                <div class="pricing-description">
+                    <p>
+                        S×Gクラスは、<strong>月額 ¥7,700（税込）</strong> で、スケジュール内のクラスに何度でも参加できる通い放題プランです。<br>
+                        習いごとやご家庭の予定に合わせて、無理なく続けていただけます。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="sibling-discount">
+                <div class="discount-badge">
+                    <i class="fas fa-users"></i> 兄弟割引
+                </div>
+                <p class="discount-text">
+                    兄弟・姉妹でご参加の場合は、<strong>2人目以降の月謝が毎月 ¥500 割引</strong> になります。
+                </p>
+            </div>
+            
+            <div class="pricing-notes">
+                <h4><i class="fas fa-info-circle"></i> 料金について</h4>
+                <ul>
+                    <li>表示価格はすべて税込です</li>
+                    <li>入会金: ¥11,000（キャンペーン中は無料の場合あり）</li>
+                    <li>スポーツ保険: 年間 ¥800（任意加入）</li>
+                    <li>兄弟割引は自動適用されます</li>
+                </ul>
+            </div>
+            
+            <div class="pricing-cta">
+                <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl">
+                    <i class="fab fa-line"></i> 料金について相談する
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 7: Schedule -->
+    <section class="kids-schedule-section" id="schedule">
+        <div class="container">
+            <h2 class="section-title">スケジュール</h2>
+            
+            <div class="schedule-download-card">
+                <div class="schedule-download-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="schedule-download-info">
+                    <h3>クラススケジュール（PDF）</h3>
+                    <p>最新のタイムテーブルをダウンロード・閲覧できます</p>
+                </div>
+                <a href="#" class="btn btn-primary schedule-download-btn" onclick="alert('スケジュールPDFは準備中です。詳しくはLINEまたは電話でお問い合わせください。'); return false;">
+                    <i class="fas fa-download"></i> ダウンロード
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 8: Trial -->
+    <section class="kids-trial-section" id="trial">
+        <div class="container">
+            <h2 class="section-title">無料体験レッスン受付中</h2>
+            
+            <p class="trial-lead">
+                「うちの子に合うかな？」「雰囲気を見てから決めたい」<br>
+                そんな保護者さまのために、S×Gクラスでは無料体験レッスンをご用意しています。
+            </p>
+            
+            <div class="trial-content">
+                <div class="trial-info">
+                    <h3><i class="fas fa-star"></i> 体験内容</h3>
+                    <ul class="trial-list">
+                        <li>ストレッチや体操の基礎でウォームアップ</li>
+                        <li>空手やボクシングの基本動作を使ったミニレッスン</li>
+                        <li>実際に役立つ簡単な護身術の技を体験</li>
+                    </ul>
+                    
+                    <h3><i class="fas fa-shopping-bag"></i> 持ち物</h3>
+                    <ul class="trial-list">
+                        <li>動きやすい服装</li>
+                        <li>飲み物・タオル</li>
+                        <li>室内シューズ（必要であれば）</li>
+                    </ul>
+                </div>
+                
+                <div class="trial-steps-container">
+                    <div class="trial-step-card">
+                        <div class="step-badge">STEP 1</div>
+                        <h4 class="step-title">LINEで「体験希望」と送信</h4>
+                        <p class="step-description">公式LINEを友だち追加して「体験希望」とメッセージをお送りください。スタッフが希望日時を伺い、スケジュールを調整します。</p>
+                    </div>
+                    
+                    <div class="step-arrow">→</div>
+                    
+                    <div class="trial-step-card">
+                        <div class="step-badge">STEP 2</div>
+                        <h4 class="step-title">カウンセリング&体験レッスン（約60分）</h4>
+                        <p class="step-description">目標やお悩みをヒアリングし、実際のクラスを体験。体力に合わせてメニューを組むので、運動が苦手な方も安心です。</p>
+                    </div>
+                    
+                    <div class="step-arrow">→</div>
+                    
+                    <div class="trial-step-card">
+                        <div class="step-badge">STEP 3</div>
+                        <h4 class="step-title">あなたに合った通い方をご提案</h4>
+                        <p class="step-description">目的やご予算に合わせて、おすすめのクラス・料金プランをご案内します。無理な勧誘は一切ありませんので、ゆっくりご検討ください。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trial-cta">
+                <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl kids-btn-primary">
+                    <i class="fab fa-line"></i> LINEで無料体験を申し込む
+                </a>
+                <a href="#faq" class="btn btn-outline-dark btn-xl">
+                    <i class="fas fa-question-circle"></i> よくあるご質問を見る
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 9: FAQ -->
+    <section class="kids-faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問（FAQ）</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>運動が苦手ですが、大丈夫でしょうか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>体操も護身術も、まずは「できる範囲」から始めます。少人数制なので、お子さまのペースに合わせてレベルを調整します。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>保護者の見学はできますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>初回体験時は、基本的に見学していただけます。継続時の見学ルールは、混雑状況に応じてご案内します。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>ケガが心配です。安全面はどうなっていますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>マットや柔らかい床材を使用し、ウォームアップとルール説明を徹底しています。無理な技はさせず、安全第一で指導します。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>他の習いごとと両立できますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>通い放題プランなので、来られる日にまとめて参加いただくことも可能です。スケジュールに合わせてご相談ください。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <span>兄弟で通う場合の料金は？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>2人目以降は毎月¥500割引となります。自動適用されますので、お申し込み時にお伝えください。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>その他のご質問はLINEからお気軽にどうぞ。</p>
+                <a href="#" onclick="openLineReservation(event)" class="btn btn-secondary btn-lg">
+                    <i class="fab fa-line"></i> LINEで質問する
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="kids-final-cta">
+        <div class="container">
+            <h2>まずは無料体験から始めませんか？</h2>
+            <p>お子さまの「できた！」を一緒に見守りましょう。</p>
+            <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl kids-btn-primary">
+                <i class="fab fa-line"></i> 無料体験を予約する
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Challenger GYM</h3>
+                    <p class="footer-text">東村山・秋津エリアの格闘技×パーソナルトレーニングジム</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/challenger__gym/" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@rikito_daikoku" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://twitter.com/challenger_gym" target="_blank" rel="noopener" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">アクセス</h4>
+                    <p class="footer-text">
+                        〒189-0001<br>
+                        東京都東村山市秋津町5-6-12<br>
+                        新秋津駅 徒歩2分・秋津駅 徒歩5分
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">お問い合わせ</h4>
+                    <p class="footer-text">
+                        <i class="fas fa-phone"></i> 042-505-9323<br>
+                        <i class="fas fa-envelope"></i> info@challenger-gym.com
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-subtitle">営業時間</h4>
+                    <p class="footer-text">
+                        月〜日: 10:00〜22:00<br>
+                        定休日: 不定休
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Challenger GYM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

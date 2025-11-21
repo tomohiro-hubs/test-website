@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トレーナー紹介 | Challenger GYM - 東村山・秋津</title>
+    <meta name="description" content="Challenger GYMのトレーナー陣をご紹介。Breaking Down出場、全関東大会優勝など実績豊富なプロフェッショナルが、一人ひとりに合わせて丁寧に指導します。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/trainers.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Challenger <span class="logo-accent">GYM</span></span>
+                        <span class="logo-subtitle">秋津・新秋津</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu desktop-menu">
+                    <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="classes.html" class="nav-link">CLASS & PRICE</a></li>
+                    <li><a href="kids.html" class="nav-link">KIDS</a></li>
+                    <li><a href="index.html#voices" class="nav-link">VOICES</a></li>
+                    <li><a href="index.html#access" class="nav-link">ACCESS</a></li>
+                    <li class="nav-cta">
+                        <a href="#" class="btn btn-primary header-cta" onclick="openLineReservation(event)">
+                            <i class="fab fa-line"></i> 無料体験予約
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html#about" class="mobile-nav-link">ABOUT</a></li>
+                <li><a href="classes.html" class="mobile-nav-link">CLASS & PRICE</a></li>
+                <li><a href="kids.html" class="mobile-nav-link">KIDS</a></li>
+                <li><a href="index.html#voices" class="mobile-nav-link">VOICES</a></li>
+                <li><a href="index.html#access" class="mobile-nav-link">ACCESS</a></li>
+                <li><a href="#" onclick="openLineReservation(event)" class="mobile-nav-link">無料体験予約</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#" onclick="openLineReservation(event)" class="floating-cta-btn">
+            <i class="fab fa-line"></i>
+            <span class="floating-cta-text">無料体験予約</span>
+            <span class="floating-cta-subtext">LINEでかんたん1分</span>
+        </a>
+    </div>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80" alt="トレーナー">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-header-title">トレーナー紹介</h1>
+                <p class="page-header-subtitle">
+                    実績豊富なプロフェッショナルが<br class="sp-br">
+                    あなたの目標達成をサポートします
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trainers Section -->
+    <section class="trainers-detail-section">
+        <div class="container">
+            <!-- Trainer 1: 大黒 力斗 -->
+            <div class="trainer-detail-card" id="daikoku">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80" alt="大黒 力斗">
+                    <div class="trainer-label main">メイントレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">大黒 力斗<span class="trainer-name-en">Rikuto Daikoku</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>Breaking Down 出場</li>
+                            <li>YouTube チャンネル登録者数 70万人超</li>
+                            <li>SNS総フォロワー数 70万人</li>
+                            <li>全関東大会 優勝</li>
+                            <li>格闘技歴 15年以上</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-hand-fist"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">キックボクシング</span>
+                            <span class="specialty-tag">筋力トレーニング</span>
+                            <span class="specialty-tag">護身術</span>
+                            <span class="specialty-tag">ダイエット指導</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            「運動が苦手」「続かない」という方こそ、ぜひ一度体験にお越しください。<br>
+                            一人ひとりの体力や目標に合わせて、無理なく楽しく続けられるメニューを組みます。<br>
+                            格闘技の技術だけでなく、心身ともに強くなれるようサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trainer 2: 黒須 亮太 -->
+            <div class="trainer-detail-card" id="kurosu">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?w=600&q=80" alt="黒須 亮太">
+                    <div class="trainer-label kids">キッズトレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">黒須 亮太<span class="trainer-name-en">Ryota Kurosu</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>キッズ体操指導歴 8年</li>
+                            <li>体操競技 元県大会出場</li>
+                            <li>護身術インストラクター資格保有</li>
+                            <li>児童心理学 修了</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-child-reaching"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">キッズ体操</span>
+                            <span class="specialty-tag">マット運動</span>
+                            <span class="specialty-tag">護身術</span>
+                            <span class="specialty-tag">運動能力向上</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            子どもたちが「できた！」という成功体験を積み重ねられるよう、<br>
+                            一人ひとりのペースに合わせて丁寧に指導します。<br>
+                            運動を通じて、体力だけでなく自信や積極性も育てていきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trainer 3: 廣岡 和功 -->
+            <div class="trainer-detail-card" id="hirooka">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="廣岡 和功">
+                    <div class="trainer-label saturday">土曜日トレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">廣岡 和功<span class="trainer-name-en">Kazunori Hirooka</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>空手 全国大会出場</li>
+                            <li>キックボクシング プロライセンス保有</li>
+                            <li>パーソナルトレーナー歴 10年</li>
+                            <li>NSCA-CPT 認定資格保有</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-dumbbell"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">空手</span>
+                            <span class="specialty-tag">キックボクシング</span>
+                            <span class="specialty-tag">筋力トレーニング</span>
+                            <span class="specialty-tag">ボディメイク</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            格闘技の技術向上はもちろん、機能的で美しいカラダづくりをサポートします。<br>
+                            土曜日クラスを担当していますので、平日お忙しい方もぜひお越しください。<br>
+                            目標達成まで、全力でサポートします！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trainer 4: 岩田 結月 -->
+            <div class="trainer-detail-card" id="iwata">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80" alt="岩田 結月">
+                    <div class="trainer-label kids">キッズトレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">岩田 結月<span class="trainer-name-en">Yuzuki Iwata</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>新体操 元全国大会出場</li>
+                            <li>キッズ体操指導歴 6年</li>
+                            <li>保育士資格保有</li>
+                            <li>リトミック指導資格保有</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-heart"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">キッズ体操</span>
+                            <span class="specialty-tag">柔軟性向上</span>
+                            <span class="specialty-tag">バランストレーニング</span>
+                            <span class="specialty-tag">女性フィットネス</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            子どもたち一人ひとりの個性を大切にしながら、楽しく体を動かせる環境づくりを心がけています。<br>
+                            「運動が好き！」と思ってもらえるよう、笑顔いっぱいのレッスンを目指します。<br>
+                            親子で通われている方も多く、ご家族みんなで楽しめますよ！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trainer 5: CAN★ -->
+            <div class="trainer-detail-card" id="can">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="CAN★">
+                    <div class="trainer-label dance">ダンストレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">CAN★<span class="trainer-name-en">Can</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>プロダンサー歴 12年</li>
+                            <li>ストリートダンス世界大会出場</li>
+                            <li>有名アーティストバックダンサー経験</li>
+                            <li>振付師・インストラクター歴 8年</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-music"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">ストリートダンス</span>
+                            <span class="specialty-tag">HIPHOP</span>
+                            <span class="specialty-tag">体幹トレーニング</span>
+                            <span class="specialty-tag">柔軟性向上</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            ダンスは楽しく続けられる最高の全身運動です！<br>
+                            初心者の方でも安心して始められるよう、基礎から丁寧にレクチャーします。<br>
+                            音楽に合わせて体を動かす楽しさを、ぜひ体感してください！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trainer 6: 野田 以心 -->
+            <div class="trainer-detail-card" id="noda">
+                <div class="trainer-detail-image">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=600&q=80" alt="野田 以心">
+                    <div class="trainer-label kick">キックトレーナー</div>
+                </div>
+                <div class="trainer-detail-content">
+                    <h2 class="trainer-name">野田 以心<span class="trainer-name-en">Ishin Noda</span></h2>
+                    
+                    <div class="trainer-achievements">
+                        <h3><i class="fas fa-trophy"></i> 実績・経歴</h3>
+                        <ul>
+                            <li>キックボクシング プロ戦績 15勝3敗</li>
+                            <li>RIZIN 出場経験あり</li>
+                            <li>ムエタイ 本場タイ修行経験</li>
+                            <li>キックボクシングジム指導歴 7年</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="trainer-specialty">
+                        <h3><i class="fas fa-hand-fist"></i> 専門分野</h3>
+                        <div class="specialty-tags">
+                            <span class="specialty-tag">キックボクシング</span>
+                            <span class="specialty-tag">ムエタイ</span>
+                            <span class="specialty-tag">ミット打ち</span>
+                            <span class="specialty-tag">実戦テクニック</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trainer-message">
+                        <h3><i class="fas fa-comment-dots"></i> メッセージ</h3>
+                        <p>
+                            プロの現役時代に培った技術を、初心者の方にも分かりやすく伝えます。<br>
+                            ミット打ちはストレス発散にも最適！思いっきり打って、スッキリしましょう。<br>
+                            本格的に格闘技を学びたい方から、楽しく運動したい方まで大歓迎です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="trainers-cta-section">
+        <div class="container">
+            <div class="trainers-cta-content">
+                <h2 class="trainers-cta-title">
+                    実績豊富なトレーナーと一緒に<br>
+                    あなたの目標を達成しませんか？
+                </h2>
+                <p class="trainers-cta-text">
+                    まずは無料体験で、ジムの雰囲気やトレーナーとの相性を確かめてください。
+                </p>
+                <div class="trainers-cta-buttons">
+                    <a href="#" onclick="openLineReservation(event)" class="btn btn-primary btn-xl">
+                        <i class="fab fa-line"></i> LINEで無料体験を予約する
+                    </a>
+                    <a href="classes.html" class="btn btn-outline-dark btn-lg">
+                        クラス・料金を見る <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Challenger GYM</h3>
+                    <p>東村山・秋津の格闘技×パーソナルジム</p>
+                    <p>
+                        〒189-0001<br>
+                        東京都東村山市秋津町5-9-20<br>
+                        メゾンドソレイユ 1階
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="classes.html">CLASS & PRICE</a></li>
+                        <li><a href="kids.html">KIDS</a></li>
+                        <li><a href="trainers.html">TRAINERS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-line"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Challenger GYM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

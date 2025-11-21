@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブ料金表コンポーネント</title>
+    <style>
+        /* ===== 料金表コンポーネント用CSS ===== */
+        
+        /* カラー変数（必要に応じて変更してください） */
+        :root {
+            --primary-color: #dc2626;
+            --dark-color: #111827;
+            --text-light: #6b7280;
+            --border-color: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        
+        /* コンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 料金表セクション */
+        .pricing-table-section {
+            margin: 3rem 0;
+        }
+        
+        .pricing-category-title {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .age-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        
+        /* PC用：テーブル表示 */
+        .pricing-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .pricing-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table th {
+            background: var(--dark-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .pricing-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tr.highlight {
+            background: #fef3c7;
+        }
+        
+        .pricing-table .plan-name {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .pricing-table .price {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-table .description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* モバイル用：カード表示 */
+        .mobile-pricing-cards {
+            display: none;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .mobile-price-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .mobile-price-card.highlight {
+            background: #fef3c7;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .mobile-price-card h4 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .mobile-price-card .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .mobile-price-card .price-row:last-of-type {
+            border-bottom: none;
+        }
+        
+        .mobile-price-card .price-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .mobile-price-card .price-value {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .mobile-price-card .description {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* レスポンシブ：768px以下でカード表示に切り替え */
+        @media (max-width: 768px) {
+            /* テーブルを非表示 */
+            .pricing-table {
+                display: none;
+            }
+            
+            /* カード表示を表示 */
+            .mobile-pricing-cards {
+                display: grid;
+            }
+            
+            .pricing-category-title {
+                font-size: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        
+        /* デモ用スタイル */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f3f4f6;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+        }
+        
+        .demo-note {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .demo-note h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 レスポンシブ料金表コンポーネント</h1>
+        
+        <div class="demo-note">
+            <h3>💡 使い方</h3>
+            <p><strong>PCで見ると：</strong> テーブル形式で表示</p>
+            <p><strong>モバイル（768px以下）で見ると：</strong> カード形式に自動切り替え</p>
+            <p>※ ブラウザの幅を変えて確認してみてください！</p>
+        </div>
+        
+        <!-- ========== 料金表コンポーネント ここから ========== -->
+        
+        <div class="pricing-table-section">
+            <h3 class="pricing-category-title">一般クラス料金</h3>
+            
+            <!-- PC用：テーブル表示 -->
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>プラン</th>
+                            <th>回数</th>
+                            <th>男性料金</th>
+                            <th>女性料金</th>
+                            <th>おすすめの方</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="plan-name">1 DAYコース</td>
+                            <td>月1回</td>
+                            <td class="price">¥3,300</td>
+                            <td class="price">¥3,300</td>
+                            <td class="description">体験後の参加やストレス発散に</td>
+                        </tr>
+                        <tr>
+                            <td class="plan-name">ベーシック</td>
+                            <td>月4回</td>
+                            <td class="price">¥8,800</td>
+                            <td class="price">¥6,600</td>
+                            <td class="description">無理なく継続したい方</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td class="plan-name">ライト</td>
+                            <td>月8回</td>
+                            <td class="price">¥11,000</td>
+                            <td class="price">¥8,800</td>
+                            <td class="description">週1〜2で通いたい方</td>
+                        </tr>
+                        <tr>
+                            <td class="plan-name">レギュラー</td>
+                            <td>通い放題</td>
+                            <td class="price">¥15,400</td>
+                            <td class="price">¥13,200</td>
+                            <td class="description">ガッツリ通いたい方</td>
+                        </tr>
+                        <tr>
+                            <td class="plan-name">超過利用</td>
+                            <td>1回</td>
+                            <td class="price">¥3,300</td>
+                            <td class="price">¥3,300</td>
+                            <td class="description">回数追加したい時に</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- モバイル用：カード表示 -->
+            <div class="mobile-pricing-cards">
+                <div class="mobile-price-card">
+                    <h4>1 DAYコース</h4>
+                    <div class="price-row">
+                        <span class="price-label">回数</span>
+                        <span>月1回</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">料金</span>
+                        <span class="price-value">¥3,300</span>
+                    </div>
+                    <p class="description">体験後の参加やストレス発散に</p>
+                </div>
+                
+                <div class="mobile-price-card">
+                    <h4>ベーシック</h4>
+                    <div class="price-row">
+                        <span class="price-label">回数</span>
+                        <span>月4回</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">男性料金</span>
+                        <span class="price-value">¥8,800</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">女性料金</span>
+                        <span class="price-value">¥6,600</span>
+                    </div>
+                    <p class="description">無理なく継続したい方</p>
+                </div>
+                
+                <div class="mobile-price-card highlight">
+                    <h4>ライト <span style="background: var(--primary-color); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; margin-left: 5px;">人気</span></h4>
+                    <div class="price-row">
+                        <span class="price-label">回数</span>
+                        <span>月8回</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">男性料金</span>
+                        <span class="price-value">¥11,000</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">女性料金</span>
+                        <span class="price-value">¥8,800</span>
+                    </div>
+                    <p class="description">週1〜2で通いたい方</p>
+                </div>
+                
+                <div class="mobile-price-card">
+                    <h4>レギュラー</h4>
+                    <div class="price-row">
+                        <span class="price-label">回数</span>
+                        <span>通い放題</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">男性料金</span>
+                        <span class="price-value">¥15,400</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">女性料金</span>
+                        <span class="price-value">¥13,200</span>
+                    </div>
+                    <p class="description">ガッツリ通いたい方</p>
+                </div>
+                
+                <div class="mobile-price-card">
+                    <h4>超過利用</h4>
+                    <div class="price-row">
+                        <span class="price-label">回数</span>
+                        <span>1回</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">料金</span>
+                        <span class="price-value">¥3,300</span>
+                    </div>
+                    <p class="description">回数追加したい時に</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ========== 料金表コンポーネント ここまで ========== -->
+        
+    </div>
+</body>
+</html>
